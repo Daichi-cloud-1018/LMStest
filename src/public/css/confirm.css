@@ -1,0 +1,136 @@
+.confirm-section {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.confirm-form {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--border);
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e8e0da;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+}
+
+.confirm-table th {
+    width: 240px;
+    background: #b39c8c;
+    color: #f8f5f3;
+    font-weight: 600;
+    text-align: left;
+}
+
+.confirm-table td {
+    color: #5f544d;
+}
+
+.confirm-table tr:last-child th,
+.confirm-table tr:last-child td {
+    border-bottom: none;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 26px;
+}
+
+.confirm-table input,
+.confirm-table select,
+.confirm-table textarea {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: 1.6;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.confirm-table .name-group {
+    display: flex;
+    gap: 8px;
+}
+
+.confirm-table .name-group input {
+    width: 50%;
+}
+
+.confirm-table select {
+    background-image: none;
+    padding-right: 0;
+}
+
+.confirm-table textarea {
+    resize: none;
+}
+
+.btn-secondary {
+    padding: 12px 46px;
+    background: transparent;
+    color: #6d5345;
+    border: 1px solid #cdbfb4;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #b39c8c;
+    color: #5b4336;
+}
+
+.btn-secondary:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .confirm-table th,
+    .confirm-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .confirm-table th {
+        border-bottom: 1px solid #cdbfb4;
+    }
+
+    .confirm-table td {
+        border-bottom: 1px solid #e8e0da;
+    }
+
+    .confirm-table tr:last-child th,
+    .confirm-table tr:last-child td {
+        border-bottom: 1px solid #e8e0da;
+    }
+
+    .confirm-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}

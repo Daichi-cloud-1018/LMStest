@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #fbf8f6;
+    --text: #8a6e5a;
+    --muted: #c7bcb3;
+    --border: #e5ddd7;
+    --field: #f3f2f1;
+    --accent: #d96a5c;
+    --button: #7a5f51;
+    --button-dark: #6b5144;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic",
+        "Meiryo", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.header {
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.header-title {
+    margin: 0;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #9b7d68;
+}
+
+.page-title {
+    margin: 32px 0 28px;
+    text-align: center;
+}
+
+.page-title h2 {
+    margin: 0;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #6d5345;
+}
+
+main {
+    padding: 0 24px 60px;
+}
+
+.btn-primary {
+    padding: 13px 52px;
+    background: var(--button);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background: var(--button-dark);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}

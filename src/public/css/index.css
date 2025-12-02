@@ -1,0 +1,175 @@
+/* Form layout */
+.contact-form {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form > div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact-form__message,
+.contact-form__address,
+.contact-form__address-building {
+    align-items: flex-start;
+}
+
+.error-text {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #c94c4c;
+}
+
+.form-label,
+.contact-form__tel-label {
+    width: 190px;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.required {
+    color: var(--accent);
+    font-size: 0.9em;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    flex: 1;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    background: var(--field);
+    color: #7a706a;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder,
+select {
+    color: #b7aea6;
+    opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d6c8bc;
+    box-shadow: 0 0 0 2px rgba(214, 200, 188, 0.35);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Select arrow */
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: var(--field)
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path fill='%23c1b6ad' d='M1 1l5 5 5-5'/></svg>")
+        no-repeat right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+/* Name */
+.contact-form__name-field {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+}
+
+.contact-form__name-field input {
+    flex: 1;
+}
+
+/* Gender */
+.contact-form__gender-ratio {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.contact-form__gender-ratio label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #7a706a;
+}
+
+.contact-form__gender-ratio input[type="radio"] {
+    accent-color: #6a4a3c;
+    width: 16px;
+    height: 16px;
+}
+
+/* Telephone */
+.contact-form__tel-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.contact-form__tel-field input[type="text"] {
+    flex: 0 0 150px;
+    text-align: left;
+}
+
+.separator {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* Button */
+.contact-form__button {
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-label,
+    .contact-form__tel-label {
+        width: 100%;
+    }
+
+    .contact-form__tel-field {
+        width: 100%;
+    }
+
+    .contact-form__tel-field input[type="text"] {
+        flex: 1;
+    }
+
+    .contact-form__button {
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}

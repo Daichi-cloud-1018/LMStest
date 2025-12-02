@@ -1,0 +1,30 @@
+Table categories {
+  id bigint [pk]
+  content varchar(255)
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table contacts {
+  id bigint [pk]
+  category_id bigint [ref: > categories.id]
+  first_name varchar(255)
+  last_name varchar(255)
+  gender tinyint
+  email varchar(255)
+  tel varchar(255)
+  address varchar(255)
+  building varchar(255)
+  detail text
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table users {
+  id bigint [pk]
+  name varchar(255)
+  email varchar(255)
+  password varchar(255)
+  created_at timestamp
+  updated_at timestamp
+}
