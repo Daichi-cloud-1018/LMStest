@@ -73,7 +73,7 @@
                 <input type="date" id="filter-date" name="date" value="{{ request('date') }}" placeholder="年/月/日">
 
                 <button type="submit" class="btn-search">検索</button>
-                <button type="button" class="btn-reset" id="reset-button" data-reset-url="{{ route('admin') }}">リセット</button>
+                <button type="button" class="btn-reset" id="reset-button" data-reset-url="{{ route('admin.reset') }}">リセット</button>
             </form>
 
             <div class="toolbar">
@@ -120,7 +120,7 @@
                                     data-building="{{ e($contact->building) }}"
                                     data-category="{{ e(optional($contact->category)->content ?? '未設定') }}"
                                     data-detail="{{ e($contact->detail) }}"
-                                    data-id="{{ $contact->id }}"
+                                    data-delete-url="{{ route('admin.destroy', ['contact' => $contact->id]) }}"
                                 >詳細</button>
                             </td>
                         </tr>
@@ -248,8 +248,8 @@
                 buildingEl.textContent = btn.dataset.building || '';
                 categoryEl.textContent = btn.dataset.category || '';
                 detailEl.textContent = btn.dataset.detail || '';
-                if (deleteForm && btn.dataset.id) {
-                    deleteForm.action = `/admin/${btn.dataset.id}`;
+                if (deleteForm && btn.dataset.deleteUrl) {
+                    deleteForm.action = btn.dataset.deleteUrl;
                 }
 
                 modal.setAttribute('aria-hidden', 'false');

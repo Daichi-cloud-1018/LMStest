@@ -47,7 +47,12 @@ php php db:seed
 - `/thanks` サンクス画面（POST）
 - `/login` ログイン
 - `/register` ユーザー登録
+- `/logout` ログアウト
 - `/admin` 管理画面（一覧・検索・詳細モーダル・エクスポート）
+- `/search` 検索
+- `/reset` 検索リセット
+- `/delete/{id}` 削除
+- `/export` エクスポート
 
 ## URL
 
